@@ -25,7 +25,27 @@ final class ChatScreenModel: ObservableObject {
     }
 
     private func onReceive(incoming: Result<URLSessionWebSocketTask.Message, Error>) {
-        //
+        webSocketTask?.receive(completionHandler: onReceive)
+        if case .success(let message) = incoming {
+            onMessage(message: message)
+        }
+        else if case .failure(let error) = incoming {
+            print("Error", error)
+        }
+    }
+
+    private func onMessage(message: URLSessionWebSocketTask.Message) {
+        if case .string(let text) = message {
+            guard let data = text.data(using: .utf8),
+                    let chatMessage = try? JSONDecoder().decode(ReceivingChatMessage.self, from: data)
+            else {
+                return
+            }
+
+            DispatchQueue.main.async {
+                self.messages.append(chatMessage)
+            }
+        }
     }
 
     deinit {
