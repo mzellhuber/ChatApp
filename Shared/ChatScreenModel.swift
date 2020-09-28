@@ -9,6 +9,7 @@ import Combine
 import Foundation
 
 final class ChatScreenModel: ObservableObject {
+    @Published private(set) var messages: [ReceivingChatMessage] = []
     private var webSocketTask: URLSessionWebSocketTask? // 1
 
     // MARK: - Connection
@@ -29,5 +30,20 @@ final class ChatScreenModel: ObservableObject {
 
     deinit {
         disconnect()
+    }
+
+    func send(text: String) {
+        let message = SubmittedChatMessage(message: text)
+        guard let json = try? JSONEncoder().encode(message),
+            let jsonString = String(data: json, encoding: .utf8)
+        else {
+            return
+        }
+
+        webSocketTask?.send(.string(jsonString)) { error in
+            if let error = error {
+                print("Error sending message", error)
+            }
+        }
     }
 }
