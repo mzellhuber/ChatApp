@@ -19,6 +19,13 @@ struct ChatScreen: View {
         model.disconnect()
     }
 
+    private func onCommit() {
+        if !message.isEmpty {
+            model.send(text: message)
+            message = ""
+        }
+    }
+
     var body: some View {
         VStack {
             // Chat history.
@@ -28,12 +35,12 @@ struct ChatScreen: View {
 
             // Message field.
             HStack {
-                TextField("Message", text: $message)
+                TextField("Message", text: $message, onEditingChanged: { _ in }, onCommit: onCommit)
                     .padding(10)
                     .background(Color.secondary.opacity(0.2))
                     .cornerRadius(5)
 
-                Button(action: {}) {
+                Button(action: onCommit) {
                     Image(systemName: "arrowshape.turn.up.right")
                         .font(.system(size: 20))
                 }
