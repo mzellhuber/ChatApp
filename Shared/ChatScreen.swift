@@ -42,7 +42,7 @@ struct ChatScreen: View {
                 ScrollViewReader { proxy in
                     LazyVStack(spacing: 8) {
                         ForEach(model.messages) { message in
-                            Text(message.message)
+                            ChatMessageRow(message: message, isUser: message.userID == userInfo.userID)
                                 .id(message.id)
                         }
                     }
