@@ -8,7 +8,16 @@
 import SwiftUI
 
 struct ChatScreen: View {
+    @StateObject private var model = ChatScreenModel()
     @State private var message = ""
+
+    private func onAppear() {
+        model.connect()
+    }
+
+    private func onDisappear() {
+        model.disconnect()
+    }
 
     var body: some View {
         VStack {
@@ -33,5 +42,7 @@ struct ChatScreen: View {
             }
             .padding()
         }
+        .onAppear(perform: onAppear)
+        .onDisappear(perform: onDisappear)
     }
 }
