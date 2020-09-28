@@ -13,6 +13,10 @@
 		2FFBA4A72521678500AC96DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBA4922521678100AC96DF /* ContentView.swift */; };
 		2FFBA4A82521678500AC96DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FFBA4932521678500AC96DF /* Assets.xcassets */; };
 		2FFBA4A92521678500AC96DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FFBA4932521678500AC96DF /* Assets.xcassets */; };
+		2FFBA4B525216B3700AC96DF /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBA4B425216B3700AC96DF /* ChatScreen.swift */; };
+		2FFBA4B625216B3700AC96DF /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBA4B425216B3700AC96DF /* ChatScreen.swift */; };
+		2FFBA4BA25216CA300AC96DF /* ChatScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBA4B925216CA300AC96DF /* ChatScreenModel.swift */; };
+		2FFBA4BB25216CA300AC96DF /* ChatScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBA4B925216CA300AC96DF /* ChatScreenModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,8 @@
 		2FFBA4A02521678500AC96DF /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FFBA4A22521678500AC96DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FFBA4A32521678500AC96DF /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		2FFBA4B425216B3700AC96DF /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
+		2FFBA4B925216CA300AC96DF /* ChatScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,8 @@
 			children = (
 				2FFBA4912521678100AC96DF /* ChatAppApp.swift */,
 				2FFBA4922521678100AC96DF /* ContentView.swift */,
+				2FFBA4B925216CA300AC96DF /* ChatScreenModel.swift */,
+				2FFBA4B425216B3700AC96DF /* ChatScreen.swift */,
 				2FFBA4932521678500AC96DF /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -188,6 +196,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FFBA4A62521678500AC96DF /* ContentView.swift in Sources */,
+				2FFBA4BA25216CA300AC96DF /* ChatScreenModel.swift in Sources */,
+				2FFBA4B525216B3700AC96DF /* ChatScreen.swift in Sources */,
 				2FFBA4A42521678500AC96DF /* ChatAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FFBA4A72521678500AC96DF /* ContentView.swift in Sources */,
+				2FFBA4BB25216CA300AC96DF /* ChatScreenModel.swift in Sources */,
+				2FFBA4B625216B3700AC96DF /* ChatScreen.swift in Sources */,
 				2FFBA4A52521678500AC96DF /* ChatAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
