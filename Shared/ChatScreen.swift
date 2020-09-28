@@ -30,7 +30,11 @@ struct ChatScreen: View {
         VStack {
             // Chat history.
             ScrollView {
-                // Coming soon!
+                LazyVStack(spacing: 8) {
+                    ForEach(model.messages) { message in
+                        Text(message.message)
+                    }
+                }
             }
 
             // Message field.
