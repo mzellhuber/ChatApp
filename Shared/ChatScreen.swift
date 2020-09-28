@@ -22,23 +22,23 @@ struct ChatScreen: View {
     var body: some View {
         VStack {
             // Chat history.
-            ScrollView { // 1
+            ScrollView {
                 // Coming soon!
             }
 
             // Message field.
             HStack {
-                TextField("Message", text: $message) // 2
+                TextField("Message", text: $message)
                     .padding(10)
                     .background(Color.secondary.opacity(0.2))
                     .cornerRadius(5)
 
-                Button(action: {}) { // 3
+                Button(action: {}) {
                     Image(systemName: "arrowshape.turn.up.right")
                         .font(.system(size: 20))
                 }
                 .padding()
-                .disabled(message.isEmpty) // 4
+                .disabled(message.isEmpty)
             }
             .padding()
         }
