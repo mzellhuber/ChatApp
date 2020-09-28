@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2F2867952521921800167E34 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2867942521921800167E34 /* Models.swift */; };
 		2F2867962521921800167E34 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2867942521921800167E34 /* Models.swift */; };
+		2F28679A2521A43800167E34 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2867992521A43800167E34 /* UserInfo.swift */; };
+		2F28679B2521A43800167E34 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2867992521A43800167E34 /* UserInfo.swift */; };
+		2F28679F252247B400167E34 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28679E252247B300167E34 /* SettingsScreen.swift */; };
+		2F2867A0252247B400167E34 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28679E252247B300167E34 /* SettingsScreen.swift */; };
 		2FFBA4A42521678500AC96DF /* ChatAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBA4912521678100AC96DF /* ChatAppApp.swift */; };
 		2FFBA4A52521678500AC96DF /* ChatAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBA4912521678100AC96DF /* ChatAppApp.swift */; };
 		2FFBA4A62521678500AC96DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBA4922521678100AC96DF /* ContentView.swift */; };
@@ -23,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		2F2867942521921800167E34 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		2F2867992521A43800167E34 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		2F28679E252247B300167E34 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		2FFBA4912521678100AC96DF /* ChatAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppApp.swift; sourceTree = "<group>"; };
 		2FFBA4922521678100AC96DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2FFBA4932521678500AC96DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +78,8 @@
 				2FFBA4B425216B3700AC96DF /* ChatScreen.swift */,
 				2FFBA4932521678500AC96DF /* Assets.xcassets */,
 				2F2867942521921800167E34 /* Models.swift */,
+				2F2867992521A43800167E34 /* UserInfo.swift */,
+				2F28679E252247B300167E34 /* SettingsScreen.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -200,9 +208,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FFBA4A62521678500AC96DF /* ContentView.swift in Sources */,
+				2F28679F252247B400167E34 /* SettingsScreen.swift in Sources */,
 				2FFBA4BA25216CA300AC96DF /* ChatScreenModel.swift in Sources */,
 				2FFBA4B525216B3700AC96DF /* ChatScreen.swift in Sources */,
 				2FFBA4A42521678500AC96DF /* ChatAppApp.swift in Sources */,
+				2F28679A2521A43800167E34 /* UserInfo.swift in Sources */,
 				2F2867952521921800167E34 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,9 +222,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FFBA4A72521678500AC96DF /* ContentView.swift in Sources */,
+				2F2867A0252247B400167E34 /* SettingsScreen.swift in Sources */,
 				2FFBA4BB25216CA300AC96DF /* ChatScreenModel.swift in Sources */,
 				2FFBA4B625216B3700AC96DF /* ChatScreen.swift in Sources */,
 				2FFBA4A52521678500AC96DF /* ChatAppApp.swift in Sources */,
+				2F28679B2521A43800167E34 /* UserInfo.swift in Sources */,
 				2F2867962521921800167E34 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
