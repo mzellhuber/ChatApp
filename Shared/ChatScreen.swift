@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ChatScreen: View {
     @StateObject private var model = ChatScreenModel()
+    @EnvironmentObject private var userInfo: UserInfo
     @State private var message = ""
 
     private func onAppear() {
-        model.connect()
+        model.connect(username: userInfo.username, userID: userInfo.userID)
     }
 
     private func onDisappear() {

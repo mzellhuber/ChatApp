@@ -9,11 +9,16 @@ import Combine
 import Foundation
 
 final class ChatScreenModel: ObservableObject {
+    private var username: String?
+    private var userID: UUID?
     @Published private(set) var messages: [ReceivingChatMessage] = []
-    private var webSocketTask: URLSessionWebSocketTask? // 1
+    private var webSocketTask: URLSessionWebSocketTask?
 
     // MARK: - Connection
-    func connect() {
+    func connect(username: String, userID: UUID) {
+        self.username = username
+        self.userID = userID
+        // TODO: - Change to something other than localhost if being deployed
         let url = URL(string: "ws://127.0.0.1:8080/chat")!
         webSocketTask = URLSession.shared.webSocketTask(with: url)
         webSocketTask?.receive(completionHandler: onReceive)
@@ -53,7 +58,8 @@ final class ChatScreenModel: ObservableObject {
     }
 
     func send(text: String) {
-        let message = SubmittedChatMessage(message: text)
+        guard let username = username, let userID = userID else { return }
+        let message = SubmittedChatMessage(message: text, user: username, userID: userID)
         guard let json = try? JSONEncoder().encode(message),
             let jsonString = String(data: json, encoding: .utf8)
         else {
